@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the OpenProducer Video feature.
+ * Code for the openproducer Video feature.
  */
 
 include_once 'openproducer_video.features.inc';
