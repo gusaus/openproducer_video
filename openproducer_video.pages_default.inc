@@ -52,7 +52,23 @@ function openproducer_video_default_page_manager_pages() {
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
-      'contentmain' => NULL,
+      'contentmain' => array(
+        'region_title' => '',
+        'hide_classes' => array(
+          'hidden-xs' => 0,
+          'hidden-sm' => 0,
+          'hidden-md' => 0,
+          'hidden-lg' => 0,
+        ),
+        'additional_classes' => array(
+          'clearfix' => 'clearfix',
+          'pull-left' => 0,
+          'pull-right' => 0,
+        ),
+      ),
+    ),
+    'contentmain' => array(
+      'style' => 'bootstrap_styles:well',
     ),
   );
   $display->cache = array();
@@ -85,7 +101,7 @@ function openproducer_video_default_page_manager_pages() {
     'override_title' => '',
     'override_title_text' => '',
     'view_mode' => 'teaser',
-    'widget_title' => '',
+    'widget_title' => 'Video',
     'use_pager' => 0,
     'pager_id' => '',
     'link_to_view' => NULL,
@@ -93,6 +109,7 @@ function openproducer_video_default_page_manager_pages() {
     'path' => NULL,
     'view_settings' => 'fields',
     'header_type' => 'none',
+    'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -108,7 +125,7 @@ function openproducer_video_default_page_manager_pages() {
   $pane->uuid = 'dade1577-fd5b-40fa-a629-7c799433c3c8';
   $display->content['new-dade1577-fd5b-40fa-a629-7c799433c3c8'] = $pane;
   $display->panels['contentmain'][0] = 'new-dade1577-fd5b-40fa-a629-7c799433c3c8';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->hide_title = PANELS_TITLE_PANE;
   $display->title_pane = 'new-dade1577-fd5b-40fa-a629-7c799433c3c8';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
